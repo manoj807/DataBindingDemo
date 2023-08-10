@@ -1,4 +1,4 @@
-package com.valleytech.databindingdemo
+package com.valleytech.databindingdemo.onewaydatabinding
 
 import android.view.View
 import androidx.databinding.ObservableField

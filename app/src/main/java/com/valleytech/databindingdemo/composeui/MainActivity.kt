@@ -5,30 +5,28 @@ import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.selection.selectable
 import androidx.compose.material3.Card
-import androidx.compose.material3.Divider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.composeapp.ui.theme.ComposeAppTheme
-import com.valleytech.databindingdemo.BasicBindingActivity
-import com.valleytech.databindingdemo.OneWayDataBindingActivity
+import com.valleytech.databindingdemo.basicdatabinding.BasicBindingActivity
+import com.valleytech.databindingdemo.databindingwithviewmodel.DatabindingWithViewModelActivity
+import com.valleytech.databindingdemo.livedatabinding.LiveDatabindingActivity
+import com.valleytech.databindingdemo.objectdatabinding.ObjectDatabindingActivity
+import com.valleytech.databindingdemo.observerfield.DatabindingWithObserverFieldActivity
+import com.valleytech.databindingdemo.onewaydatabinding.OneWayDataBindingActivity
+import com.valleytech.databindingdemo.recycleview.ui.RecycleViewDataBindingActivity
 import com.valleytech.databindingdemo.utils.intent
 
 class MainActivity : ComponentActivity() {
@@ -79,6 +77,30 @@ fun MessageList(messages: List<String>) {
                 }
                  1->{
                      val intent= contex.intent<OneWayDataBindingActivity>()
+                     contex.startActivity(intent)
+                 }
+                 2->{
+                     val intent= contex.intent<DatabindingWithViewModelActivity>()
+                     contex.startActivity(intent)
+                 }
+
+                 3->{
+                     val intent= contex.intent<DatabindingWithObserverFieldActivity>()
+                     contex.startActivity(intent)
+                 }
+                 4->{
+                     val intent= contex.intent<ObjectDatabindingActivity>()
+                     contex.startActivity(intent)
+                 }
+
+
+
+                 5->{
+                     val intent= contex.intent<LiveDatabindingActivity>()
+                     contex.startActivity(intent)
+                 }
+                 6->{
+                     val intent= contex.intent<RecycleViewDataBindingActivity>()
                      contex.startActivity(intent)
                  }
                  else->{
@@ -133,7 +155,13 @@ fun getDataBindingList():List<String>
 {
 
     return listOf("Basic Data Binding",
-               "One Way Data Binding"
+               "One Way Data Binding",
+
+                "Data Binding with ViewModel",
+                 "Data Binding with Observer Field",
+        "Data Binding with Object Databinding",
+        "Data Binding with Live Data",
+        "Data Binding with Recycleview"
              )
 
 }

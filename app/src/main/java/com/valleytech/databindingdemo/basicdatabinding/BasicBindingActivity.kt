@@ -1,8 +1,10 @@
-package com.valleytech.databindingdemo
+package com.valleytech.databindingdemo.basicdatabinding
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import com.valleytech.databindingdemo.R
+import com.valleytech.databindingdemo.User
 import com.valleytech.databindingdemo.databinding.ActivityBasicDataBindingBinding
 
 
@@ -16,7 +18,9 @@ class BasicBindingActivity : AppCompatActivity() {
 
         userObj = User("Updating Value in OnCreate")
         val binding: ActivityBasicDataBindingBinding =
-            DataBindingUtil.setContentView<ActivityBasicDataBindingBinding>(this, R.layout.activity_basic_data_binding).also {
+            DataBindingUtil.setContentView<ActivityBasicDataBindingBinding>(this,
+                R.layout.activity_basic_data_binding
+            ).also {
                 it.user = userObj
             }
 

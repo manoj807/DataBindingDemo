@@ -2,15 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-<!--    <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        tools:targetApi="31">-->
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -23,7 +14,7 @@
         tools:targetApi="31">
 
         <activity
-            android:name="com.valleytech.databindingdemo.composeui.MainActivity"
+            android:name=".composeui.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.ComposeApp">
@@ -34,13 +25,34 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".BasicBindingActivity"
+            android:name=".basicdatabinding.BasicBindingActivity"
             android:exported="true"
-            android:label="@string/app_name">
-
-        </activity>
+            android:label="@string/app_name"/>
         <activity
-            android:name=".OneWayDataBindingActivity"
+            android:name=".onewaydatabinding.OneWayDataBindingActivity"
+            android:exported="true"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".databindingwithviewmodel.DatabindingWithViewModelActivity"
+            android:exported="true"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".observerfield.DatabindingWithObserverFieldActivity"
+            android:exported="true"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name="com.valleytech.databindingdemo.objectdatabinding.ObjectDatabindingActivity"
+            android:exported="true"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name="com.valleytech.databindingdemo.livedatabinding.LiveDatabindingActivity"
+            android:exported="true"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name=".recycleview.ui.RecycleViewDataBindingActivity"
             android:exported="true"
             android:label="@string/app_name" />
     </application>

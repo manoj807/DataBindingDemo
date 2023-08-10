@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="com.valleytech.databindingdemo.OneWayDataBindingViewModel" />
+            type="com.valleytech.databindingdemo.onewaydatabinding.OneWayDataBindingViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
