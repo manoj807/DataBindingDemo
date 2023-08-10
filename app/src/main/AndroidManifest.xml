@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:targetApi="31">
-
+        <activity
+            android:name=".twowaydatabinding.TwoWayDataBindActivity"
+            android:exported="false" />
         <activity
             android:name=".composeui.MainActivity"
             android:exported="true"
@@ -27,7 +29,7 @@
         <activity
             android:name=".basicdatabinding.BasicBindingActivity"
             android:exported="true"
-            android:label="@string/app_name"/>
+            android:label="@string/app_name" />
         <activity
             android:name=".onewaydatabinding.OneWayDataBindingActivity"
             android:exported="true"
@@ -40,17 +42,14 @@
             android:name=".observerfield.DatabindingWithObserverFieldActivity"
             android:exported="true"
             android:label="@string/app_name" />
-
         <activity
-            android:name="com.valleytech.databindingdemo.objectdatabinding.ObjectDatabindingActivity"
+            android:name=".objectdatabinding.ObjectDatabindingActivity"
             android:exported="true"
             android:label="@string/app_name" />
-
         <activity
-            android:name="com.valleytech.databindingdemo.livedatabinding.LiveDatabindingActivity"
+            android:name=".livedatabinding.LiveDatabindingActivity"
             android:exported="true"
             android:label="@string/app_name" />
-
         <activity
             android:name=".recycleview.ui.RecycleViewDataBindingActivity"
             android:exported="true"

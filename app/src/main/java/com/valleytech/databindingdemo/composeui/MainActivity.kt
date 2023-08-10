@@ -27,6 +27,7 @@ import com.valleytech.databindingdemo.objectdatabinding.ObjectDatabindingActivit
 import com.valleytech.databindingdemo.observerfield.DatabindingWithObserverFieldActivity
 import com.valleytech.databindingdemo.onewaydatabinding.OneWayDataBindingActivity
 import com.valleytech.databindingdemo.recycleview.ui.RecycleViewDataBindingActivity
+import com.valleytech.databindingdemo.twowaydatabinding.TwoWayDataBindActivity
 import com.valleytech.databindingdemo.utils.intent
 
 class MainActivity : ComponentActivity() {
@@ -103,6 +104,10 @@ fun MessageList(messages: List<String>) {
                      val intent= contex.intent<RecycleViewDataBindingActivity>()
                      contex.startActivity(intent)
                  }
+                 7->{
+                     val intent= contex.intent<TwoWayDataBindActivity>()
+                     contex.startActivity(intent)
+                 }
                  else->{
                      Toast.makeText(contex,"Item not response", Toast.LENGTH_LONG)
                  }
@@ -161,7 +166,8 @@ fun getDataBindingList():List<String>
                  "Data Binding with Observer Field",
         "Data Binding with Object Databinding",
         "Data Binding with Live Data",
-        "Data Binding with Recycleview"
+        "Data Binding with Recycleview",
+        "Two Way DataBinding"
              )
 
 }
